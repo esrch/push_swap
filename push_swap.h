@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:26:54 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/24 18:33:31 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/25 08:55:24 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,23 +82,23 @@ bool	game_add_element(t_game *game, int new_elem);
 void	game_print(t_game *game);
 
 // Game ops
-void	game_sa(t_game *game);
-void	game_sb(t_game *game);
-void	game_ss(t_game *game);
-void	game_pa(t_game *game, int times);
-void	game_pb(t_game *game, int times);
-void	game_ra(t_game *game, int times);
-void	game_rb(t_game *game, int times);
-void	game_rr(t_game *game, int times);
-void	game_rra(t_game *game, int times);
-void	game_rrb(t_game *game, int times);
-void	game_rrr(t_game *game, int times);
+void	game_sa(t_game *game, bool print);
+void	game_sb(t_game *game, bool print);
+void	game_ss(t_game *game, bool print);
+void	game_pa(t_game *game, int times, bool print);
+void	game_pb(t_game *game, int times, bool print);
+void	game_ra(t_game *game, int times, bool print);
+void	game_rb(t_game *game, int times, bool print);
+void	game_rr(t_game *game, int times, bool print);
+void	game_rra(t_game *game, int times, bool print);
+void	game_rrb(t_game *game, int times, bool print);
+void	game_rrr(t_game *game, int times, bool print);
 
 // Solver
-bool	solve_game(t_game *game);
-bool	solve_three(t_game *game);
-bool	solve_complex(t_game *game);
-bool	solve_rotation(t_game *game);
+void	solve_game(t_game *game);
+void	solve_three(t_game *game);
+void	solve_complex(t_game *game);
+void	solve_rotation(t_game *game);
 int		find_b_target_index(t_game *game, int elem);
 void	set_r_r_move(t_game *game, int a_index, int b_index,
 			t_game_move *move);
@@ -108,8 +108,8 @@ void	improve_rr_r_move(t_game *game, int a_index, int b_index,
 			t_game_move *move);
 void	improve_rr_rr_move(t_game *game, int a_index, int b_index,
 			t_game_move *move);
-bool	execute_best_move(t_game *game);
-bool	execute_game_move(t_game *game, t_game_move *move);
+void	execute_best_move(t_game *game);
+void	execute_game_move(t_game *game, t_game_move *move);
 
 // Utils
 int		parse_arg(char *num_str, bool *is_valid_num);

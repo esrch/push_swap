@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:28:08 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/24 18:28:09 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/25 08:18:45 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	calc_best_move(t_game *game, int a_index, t_game_move *move)
 	improve_rr_rr_move(game, a_index, b_index, move);
 }
 
-bool	execute_best_move(t_game *game)
+void	execute_best_move(t_game *game)
 {
 	int			i;
 	t_game_move	best_move;
@@ -38,5 +38,5 @@ bool	execute_best_move(t_game *game)
 			best_move = new_move;
 		i++;
 	}
-	return (execute_game_move(game, &best_move));
+	execute_game_move(game, &best_move);
 }

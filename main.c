@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:26:39 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/24 18:34:55 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/25 09:30:06 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	main(int argc, char **argv)
 		game_free(game);
 		return (1);
 	}
-	if (!solve_game(game))
-		print_error();
+	solve_game(game);
+	game_free(game);
 }
