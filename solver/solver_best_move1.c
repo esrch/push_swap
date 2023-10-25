@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:28:08 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/25 08:18:45 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/25 12:36:49 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ static void	calc_best_move(t_game *game, int a_index, t_game_move *move)
 	int	b_index;
 
 	b_index = find_b_target_index(game, game->stack_a->elements[a_index]);
-	set_r_r_move(game, a_index, b_index, move);
-	improve_r_rr_move(game, a_index, b_index, move);
-	improve_rr_r_move(game, a_index, b_index, move);
-	improve_rr_rr_move(game, a_index, b_index, move);
+	set_ra_rb_move(game, a_index, b_index, move);
+	improve_ra_rrb_move(game, a_index, b_index, move);
+	improve_rra_rb_move(game, a_index, b_index, move);
+	improve_rra_rrb_move(game, a_index, b_index, move);
 }
 
 void	execute_best_move(t_game *game)

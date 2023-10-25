@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:26:54 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/25 08:55:24 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/25 12:35:57 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ typedef struct s_game
 
 typedef enum e_move_type
 {
-	R_R,
-	R_RR,
-	RR_R,
-	RR_RR
+	RA_RB,
+	RA_RRB,
+	RRA_RB,
+	RRA_RRB
 }	t_move_type;
 
 typedef struct s_game_move
@@ -100,13 +100,13 @@ void	solve_three(t_game *game);
 void	solve_complex(t_game *game);
 void	solve_rotation(t_game *game);
 int		find_b_target_index(t_game *game, int elem);
-void	set_r_r_move(t_game *game, int a_index, int b_index,
+void	set_ra_rb_move(t_game *game, int a_index, int b_index,
 			t_game_move *move);
-void	improve_r_rr_move(t_game *game, int a_index, int b_index,
+void	improve_ra_rrb_move(t_game *game, int a_index, int b_index,
 			t_game_move *move);
-void	improve_rr_r_move(t_game *game, int a_index, int b_index,
+void	improve_rra_rb_move(t_game *game, int a_index, int b_index,
 			t_game_move *move);
-void	improve_rr_rr_move(t_game *game, int a_index, int b_index,
+void	improve_rra_rrb_move(t_game *game, int a_index, int b_index,
 			t_game_move *move);
 void	execute_best_move(t_game *game);
 void	execute_game_move(t_game *game, t_game_move *move);
