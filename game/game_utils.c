@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:27:44 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/25 09:28:12 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:04:31 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ t_game	*game_init(int total_size)
 		game_free(game);
 		return (NULL);
 	}
-	game->total_size = total_size;
 	return (game);
 }
 

@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:26:54 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/25 12:35:57 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:04:14 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_stack
 {
 	int	*elements;
 	int	content_size;
+	int	total_size;
 	int	max;
 	int	min;
 }	t_stack;
@@ -31,7 +32,6 @@ typedef struct s_game
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int		total_size;
 }	t_game;
 
 typedef enum e_move_type

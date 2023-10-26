@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:29:15 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/24 18:29:17 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:05:07 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_stack	*stack_init(int total_size)
 		return (NULL);
 	}
 	stack->content_size = 0;
+	stack->total_size = total_size;
 	return (stack);
 }
 

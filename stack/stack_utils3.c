@@ -6,7 +6,7 @@
 /*   By: erabbath <erabbath@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:29:32 by erabbath          #+#    #+#             */
-/*   Updated: 2023/10/24 18:29:33 by erabbath         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:06:02 by erabbath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ void	stack_shift_right(t_stack *stack)
 {
 	int	i;
 
-	i = stack->content_size;
+	if (stack->content_size >= stack->total_size)
+		i = stack->content_size - 1;
+	else
+		i = stack->content_size;
 	while (i)
 	{
 		stack->elements[i] = stack->elements[i - 1];
